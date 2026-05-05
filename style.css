@@ -126,7 +126,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
-  animation: heroFade 20s infinite;
+  animation: heroFade 25s infinite;
 }
 
 /* 画像指定 */
@@ -148,6 +148,11 @@ header {
 .slide4 {
   background-image: url("images/student4.jpg");
   animation-delay: 15s;
+}
+
+.slide5 {
+  background-image: url("images/student5.jpg");
+  animation-delay: 20s;
 }
 
 /* 文字を見やすくする黒い膜 */
@@ -286,6 +291,17 @@ section {
   margin-bottom: 12px;
 }
 
+.staff-card {
+  display: flex;          /* ←横並びにする */
+  align-items: center;    /* 縦位置を揃える */
+  gap: 20px;              /* 画像と文字の間の余白 */
+
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
 .staff-box {
   display: flex;
   align-items: center;
@@ -301,6 +317,73 @@ section {
   height: auto;
   border-radius: 20px;
   display: block;
+}
+
+.column-button {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #4f7cff;
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.toc {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  margin: 24px 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.toc h2 {
+  margin-bottom: 12px;
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+}
+
+.toc li {
+  margin: 10px 0;
+}
+
+.toc a {
+  color: #4f7cff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
+.column-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.column-article {
+  background: white;
+  padding: 40px;
+  border-radius: 18px;
+  line-height: 1.9;
+}
+
+.column-article h1 {
+  margin-bottom: 30px;
+}
+
+.column-article h3 {
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.column-article p {
+  margin-bottom: 18px;
 }
 
 .faq-item {
