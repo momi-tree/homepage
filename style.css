@@ -386,6 +386,30 @@ section {
   margin-bottom: 18px;
 }
 
+.sweet-video {
+  width: 50%;
+  max-width: 800px;
+  border-radius: 16px;
+  display: block;
+  margin: 30px auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.image-row {
+  display: flex;
+  gap: 20px;              /* 画像の間の余白 */
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.image-row img {
+  width: 70%;
+  max-width: 300px;      /* 1枚の最大サイズ */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
 .faq-item {
   margin-bottom: 10px;
 }
