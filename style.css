@@ -455,7 +455,7 @@ section {
 
 .image-row img {
   width: 70%;
-  max-width: 300px;      /* 1枚の最大サイズ */
+  max-width: 500px;      /* 1枚の最大サイズ */
   height: auto;
   border-radius: 12px;
   object-fit: cover;
