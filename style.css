@@ -126,7 +126,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
-  animation: heroFade 25s infinite;
+  animation: heroFade 30s infinite;
 }
 
 /* 画像指定 */
@@ -153,6 +153,11 @@ header {
 .slide5 {
   background-image: url("images/student5.JPG");
   animation-delay: 20s;
+}
+
+.slide6 {
+  background-image: url("images/student6.jpg");
+  animation-delay: 25s;
 }
 
 /* 文字を見やすくする黒い膜 */
@@ -314,7 +319,7 @@ section {
 }
 
 .staff-image img {
-  width: 280px;
+  max-width: 500px;      /* 1枚の最大サイズ */
   height: auto;
   border-radius: 20px;
   display: block;
