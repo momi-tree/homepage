@@ -28,26 +28,30 @@ window.addEventListener("load", () => {
   }, 3000);
 });
 
-const answerButtons = document.querySelectorAll(".answer-list button");
-const explanation = document.querySelector(".explanation");
+const quizCards = document.querySelectorAll(".quiz-card");
 
-answerButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const isCorrect = button.dataset.correct === "true";
+quizCards.forEach((card) => {
+  const answerButtons = card.querySelectorAll(".answer-list button");
+  const explanation = card.querySelector(".explanation");
 
-    answerButtons.forEach((btn) => {
-      btn.disabled = true;
+  answerButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const isCorrect = button.dataset.correct === "true";
+
+      answerButtons.forEach((btn) => {
+        btn.disabled = true;
+      });
+
+      if (isCorrect) {
+        button.classList.add("correct");
+      } else {
+        button.classList.add("wrong");
+
+        const correctButton = card.querySelector('[data-correct="true"]');
+        correctButton.classList.add("correct");
+      }
+
+      explanation.classList.add("show");
     });
-
-    if (isCorrect) {
-      button.classList.add("correct");
-    } else {
-      button.classList.add("wrong");
-
-      const correctButton = document.querySelector('[data-correct="true"]');
-      correctButton.classList.add("correct");
-    }
-
-    explanation.classList.add("show");
   });
 });
