@@ -27,3 +27,27 @@ window.addEventListener("load", () => {
     opening.style.display = "none";
   }, 3000);
 });
+
+const answerButtons = document.querySelectorAll(".answer-list button");
+const explanation = document.querySelector(".explanation");
+
+answerButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const isCorrect = button.dataset.correct === "true";
+
+    answerButtons.forEach((btn) => {
+      btn.disabled = true;
+    });
+
+    if (isCorrect) {
+      button.classList.add("correct");
+    } else {
+      button.classList.add("wrong");
+
+      const correctButton = document.querySelector('[data-correct="true"]');
+      correctButton.classList.add("correct");
+    }
+
+    explanation.classList.add("show");
+  });
+});
